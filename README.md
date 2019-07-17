@@ -18,7 +18,7 @@ The `^` and `$` metachars. represent the start and end of a line of text
 
 ### Charcter Class: `[]`
 Square brackets, called `character class` let you matcg any one of several characters. Supposed you want to match the word `gray`, but also want to find it if it was spelled `grey`. A character class will allow you to match either:
-
+####Example
 - `gr[ae]y`: match g followed by r, followed by either an e or an a followed by a y.
 
 If you use `[^...]` instead of `[...]` the result will be a `regex` that matches a char class that does not include the chars followed by the `^` which is interesting because the `^` has a different result then using it outside of a `character class` which would match at the begining of the line.
