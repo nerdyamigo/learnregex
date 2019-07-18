@@ -36,7 +36,16 @@ The `|` metacharacter means "or". It allows combining multiple expressions into 
 #### Examples:
 - `Mike|Michael`: this would match `Mike` and `Michael`
 
-#### Matching optional items: `?`
+### Matching optional items: `?`
+The `?` metacharacter means `optional`. It is placed after a char. that is allowed, but not required, at a certain point in an expression. The question mark attaches only to the immediate preceding char.
+#### Example:
+- `flavou?r`: this will match every letter but has a conditional `u` 
+
+### Quantifiers: `+` and `*`
+Like the question mark the `+` and `*` metachars. affect the number of times the preceeding char can appear in the expression. The metachar `+` matches one or more immediately preceding item, while `*` matches any number og the preceding item, including 0
+#### Example:
+- `go+al`: will match goal and goooooooooooooal but not gal
+Name quantifiers (`?+*`) because they influence the quantity of the item they are attached to.
 
 
 
