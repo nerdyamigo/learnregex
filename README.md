@@ -47,5 +47,19 @@ Like the question mark the `+` and `*` metachars. affect the number of times the
 - `go+al`: will match goal and goooooooooooooal but not gal
 Name quantifiers (`?+*`) because they influence the quantity of the item they are attached to.
 
+### Interval Quantifier: `{}`
+The `{min, max}` metasequence allows you to specify the number of times a particular item can be matched by providing your own `min` and `max`.
+#### Example:
+- `go{1,5}al`: matches the goal string with up to 5 goals. The sequence `{0,1}` is the same as `?`
+
+### Escape Character: `\`
+The `\` metachar. is used to escape metachars. that have special meaning so you can match in patterns. For example, if you would like to match `?` or `\` chars you can precede with a `\`, which removes their meaning `\\` or `\?`
+
+### Parenthesis for matching: `()`
+Most RegEx tools will allow you to capture a particular subset of an expression with parens. 
+#### Example:
+- `http://([^/]+)`
+    - begining of the RegEx matches up to `http://`
+    - the rest of the expression matches the character up to a `/`: `http://blog.com/blogpost1/image` would only match `http://blog.com`
 
 
